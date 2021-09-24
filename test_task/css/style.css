@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro.woff") format("woff"), url("../fonts/GothamPro.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Light.woff") format("woff"), url("../fonts/GothamPro-Light.woff2") format("woff2");
+}
+.container {
+  max-width: 1280px;
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+.bestsellers__container {
+  max-width: 1170px;
+  margin: 25px auto;
+  font-family: Gotham Pro, sans-serif;
+}
+@media (max-width: 992px) {
+  .bestsellers__container {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .bestsellers__container {
+    margin-top: 18px;
+    margin-left: 15px;
+  }
+}
+
+.bestsellers__header {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  margin: 25px 0;
+}
+.bestsellers__header .bestsellers__h2 {
+  font-size: 34px;
+  line-height: 37px;
+  font-weight: 300;
+  margin-right: 19px;
+}
+@media (max-width: 767px) {
+  .bestsellers__header .bestsellers__h2 {
+    font-size: 27px;
+    line-height: 33px;
+  }
+}
+.bestsellers__header .bestsellers__button {
+  background-image: url("../img/arrow_link.svg");
+  width: 6.08px;
+  height: 9.8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .bestsellers__header .bestsellers__button {
+    margin-left: auto;
+    margin-right: 24px;
+  }
+}
+.bestsellers__header .arrow__container {
+  margin-left: auto;
+  display: flex;
+  width: 54px;
+  height: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .bestsellers__header .arrow__container {
+    display: none;
+  }
+}
+.bestsellers__header .arrow__container .back {
+  background-image: url("../img/arrow_left.svg");
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #F6F6F6;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bestsellers__header .arrow__container .forward {
+  background-image: url("../img/arrow_rigth.svg");
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #F6F6F6;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bestsellers__cards {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+.bestsellers__cards .bestsellers__card {
+  max-width: 270px;
+  max-height: 387px;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  .bestsellers__cards .bestsellers__card {
+    max-width: 247px;
+    margin-right: 30px;
+  }
+  .bestsellers__cards .bestsellers__card:last-child {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .bestsellers__card {
+    position: relative;
+    max-width: 290px;
+    max-height: 309px;
+  }
+}
+.bestsellers__cards .card__img-1 {
+  background-image: url("../img/conditioner_1.png");
+}
+.bestsellers__cards .card__img-2 {
+  background-image: url("../img/conditioner_2.png");
+}
+.bestsellers__cards .card__img-3 {
+  background-image: url("../img/conditioner_3.png");
+}
+.bestsellers__cards .card__img-4 {
+  background-image: url("../img/conditioner_4.png");
+}
+.bestsellers__cards .card__img {
+  display: flex;
+  align-items: flex-start;
+  width: 230px;
+  height: 150px;
+  margin: 20px 20px 15px 20px;
+}
+@media (max-width: 992px) {
+  .bestsellers__cards .card__img {
+    width: 209px;
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__img {
+    width: 249px;
+    height: 98px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+  }
+}
+.bestsellers__cards .card__img .text__new {
+  font-size: 13px;
+  line-height: 15px;
+  color: #3DDC97;
+  padding: 5px 10px;
+  background-color: #EEFCF6;
+  border: 1px solid #EEFCF6;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__img .text__new {
+    margin-bottom: 5px;
+  }
+}
+.bestsellers__cards .card__img .text__bestseller {
+  font-size: 13px;
+  line-height: 15px;
+  color: #E49F62;
+  padding: 5px 10px;
+  background-color: #FCF4ED;
+  border: 1px solid #FCF4ED;
+  border-radius: 5px;
+}
+.bestsellers__cards .card__description {
+  font-size: 13px;
+  line-height: 19px;
+  color: #888888;
+  margin: 0 20px 5px 20px;
+}
+.bestsellers__cards .card__name {
+  font-size: 15px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0 20px 5px 20px;
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__name {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+.bestsellers__cards .card__star-rating {
+  margin: 0 20px 34px 20px;
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__star-rating {
+    margin: 0 20px 18px 20px;
+  }
+}
+.bestsellers__cards .card__star-rating .card__star {
+  margin-right: 5px;
+}
+.bestsellers__cards .card__star-rating .card__rating {
+  display: inline-block;
+}
+.bestsellers__cards .card__prices {
+  flex: 1 1 auto;
+  margin: 0 12px 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__prices {
+    justify-content: flex-start;
+  }
+}
+.bestsellers__cards .card__prices .card__price {
+  padding-right: 13px;
+  font-size: 19px;
+  line-height: 23px;
+  color: #444444;
+  margin-right: 5px;
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__prices .card__price {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.bestsellers__cards .card__prices .card__ex-price {
+  padding-right: 18px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #888;
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+@media (max-width: 992px) {
+  .bestsellers__cards .card__prices .card__ex-price {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__prices .card__ex-price {
+    display: block;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+.bestsellers__cards .card__to-cart__container {
+  flex: 1 1 auto;
+  margin: 0 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__to-cart__container {
+    margin: 0 15px 15px 15px;
+  }
+}
+.bestsellers__cards .card__to-cart__container .card__to-cart {
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+  padding: 14px 36px 16px 36px;
+  border: 1px solid #00ADEF;
+  background-color: #00ADEF;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  .bestsellers__cards .card__to-cart__container .card__to-cart {
+    padding: 14px 25.5px 16px 25.5px;
+  }
+}
+@media (max-width: 767px) {
+  .bestsellers__cards .card__to-cart__container .card__to-cart {
+    font-size: 13px;
+    line-height: 13px;
+    padding: 16px 95px;
+    white-space: nowrap;
+  }
+}
+.bestsellers__cards .card__to-cart__container .card__like-button {
+  width: 21px;
+  height: 19px;
+  background-image: url("../img/like.svg");
+  background-color: inherit;
+}
+.bestsellers__cards .card__to-cart__container .menu__button {
+  width: 18px;
+  height: 16px;
+  background-image: url("../img/menu_+.svg");
+  background-color: inherit;
+}
+
+.mob__like-img {
+  position: absolute;
+  top: 18px;
+  right: 53px;
+  width: 21px;
+  height: 19px;
+  background-image: url("../img/like.svg");
+  background-color: inherit;
+}
+
+.mob__menu-img {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 18px;
+  height: 16px;
+  background-image: url("../img/menu_+.svg");
+  background-color: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */
